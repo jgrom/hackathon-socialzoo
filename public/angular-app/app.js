@@ -1,11 +1,23 @@
-angular.module('zapp', ['ngRoute', 'angular-jwt']).config(config).run(run);
+var app = angular.module('zapp', ['ngRoute', 'angular-jwt']).config(config).run(run);
+app.directive('header',function(){
+      return{
+        restrict : 'A',
+        templateUrl : 'angular-app/partials/header.html'
+      }
+    });
+    app.directive('footer',function(){
+      return{
+        restrict : 'A',
+        templateUrl : 'angular-app/partials/footer.html'
+      }
+    });
 
 function config($httpProvider, $routeProvider) {
   $httpProvider.interceptors.push('AuthInterceptor');
 
   $routeProvider
     .when('/', {
-      templateUrl: 'angular-app/main/main.html',
+      templateUrl: 'angular-app/partials/main.html',
       access: {
         restricted: false
       }
