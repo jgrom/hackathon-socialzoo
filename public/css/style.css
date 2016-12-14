@@ -52,5 +52,7 @@ body {
     background: #fafafa;
     position: relative;
   }
-
+h2.mdl-card__title-text{
+  font-size: 30px;
+}
    /*cards*/
