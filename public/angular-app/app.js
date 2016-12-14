@@ -1,33 +1,56 @@
-var app = angular.module('zapp', ['ngRoute']);
+angular.module('zapp', ['ngRoute', 'angular-jwt']).config(config).run(run);
 
-app.config(function($routeProvider) {
+function config($httpProvider, $routeProvider) {
+  $httpProvider.interceptors.push('AuthInterceptor');
 
   $routeProvider
     .when('/', {
-      templateUrl: 'angular-app/partials/main.html',
+      templateUrl: 'angular-app/main/main.html',
+      access: {
+        restricted: false
+      }
+    })
+    .when('/hotels', {
+      templateUrl : 'angular-app/hotel-list/hotels.html',
+      controller: HotelsController,
+      controllerAs: 'vm',
+      access: {
+        restricted: false
+      }
+    })
+    .when('/hotel/:id', {
+      templateUrl  : 'angular-app/hotel-display/hotel.html',
+      controller   : HotelController,
+      controllerAs : 'vm',
+      access: {
+        restricted: false
+      }
+    })
+    .when('/register', {
+      templateUrl  : 'angular-app/register/register.html',
+      controller   : RegisterController,
+      controllerAs : 'vm',
+      access: {
+        restricted: false
+      }
+    })
+    .when('/profile', {
+      templateUrl: 'angular-app/profile/profile.html',
+      access: {
+        restricted: true
+      }
     })
     .otherwise({
       redirectTo:'/'
     });
-});
 
-app.directive("w3TestDirective", function() {
-    return {
-        restrict : "A",
-        template : "<h1>Made by a directive!</h1>"
-    };
-});
+}
 
-app.directive('header', function header() {
-      return {
-        restrict : "A",
-        templateUrl : 'angular-app/partials/header.html'
-    };
-});
-
-app.directive('footer', function footer() {
-      return {
-        restrict : "A",
-        templateUrl : 'angular-app/partials/footer.html'
-    };
-});
+function run($rootScope, $location, $window, AuthFactory) {
+  $rootScope.$on('$routeChangeStart', function(event, nextRoute, currentRoute) {
+    if(nextRoute.access !== undefined && nextRoute.access.restricted && !$window.sessionStorage.token && !AuthFactory.isLoggedIn) {
+      event.preventDefault();
+      $location.path('/');
+    }
+  })
+}

@@ -1,41 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="fr" ng-app="zapp">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="description" content=""> -->
-    <title>Social Zoo</title>
-
-    <!-- Favicons-->
+    <meta charset="utf-8"/>
+    <title>Portail de formation</title>
     <link rel="icon" href="img/favicon.ico" />
 
-    <!-- CSS-->
-    <link type="text/css" rel="stylesheet" href="vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
+    <!--Import Google Icon Font-->
     <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+    <!--Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootswatch-theme/cerulean/bootstrap.min.css"/> -->
+    <link type="text/css" rel="stylesheet" href="vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
+
+    <link type="text/css" rel="stylesheet"  media="screen,projection" href="css/custom.css"/>
+    <link type="text/css" rel="stylesheet"  media="screen,projection" href="css/style.css"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
 
-    	<header header></header>
+    <mh-navigation></mh-navigation>
 
-  
+    <div class="container">
+      <div ng-view></div>
+    </div>
 
-    	<main ng-view></main>
-
-    	<footer footer></footer>
     <!-- Scripts import -->
     <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
     <script type="text/javascript" src="vendor/materialize/js/materialize.min.js"></script>
-    <!-- <script type="text/javascript" src="vendor/angularjs/angular.min.js"></script>
-    <script type="text/javascript" src="vendor/angularjs/angular-route.min.js"></script> -->
-    <!--<script type="text/javascript" src="vendor/angularjs/angular-sanitize.min.js"></script>-->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script type="text/javascript" src="vendor/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angularjs/angular-route.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-jwt/dist/angular-jwt.min.js"></script>
 
     <script type="text/javascript" src="angular-app/app.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="angular-app/hotel-list/hotel-list-controller.js"></script>
+    <script type="text/javascript" src="angular-app/hotel-display/hotel-display-controller.js"></script>
+    <script type="text/javascript" src="angular-app/hotel-data-factory/hotel-data-factory.js"></script>
+    <script type="text/javascript" src="angular-app/hotel-rating/hotel-rating-directive.js"></script>
+    <script type="text/javascript" src="angular-app/register/register-controller.js"></script>
+    <script type="text/javascript" src="angular-app/navigation-directive/navigation-directive.js"></script>
+    <script type="text/javascript" src="angular-app/login/login-controller.js"></script>
+    <script type="text/javascript" src="angular-app/auth/auth-factory.js"></script>
+    <script type="text/javascript" src="angular-app/auth/auth-interceptor.js"></script>
+
   </body>
 </html>
