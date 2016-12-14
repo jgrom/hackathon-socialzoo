@@ -1,20 +1,28 @@
 <!-- Dropdown Structure -->
 <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!" class="brand-logo">Rezoo</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Blablabla</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="sass.html"><i class="material-icons left">add</i>Coucou</a></li>
+        <li><a href="badges.html"><i class="material-icons left">star</i>Login</a></li>
+        <li><a href="collapsible.html">Infos</a></li>
+        <li>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
+        <li><input placeholder="nom utilsateur" id="username" type="text" class="validate" /></li>
+        <li><input placeholder="mot de passe" id="password" type="password" class="validate" /></li>
+        <li><a class="waves-effect waves-light btn">Login</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><input placeholder="nom utilsateur" id="username" type="text" class="validate" /></li>
+        <li><input placeholder="mot de passe" id="password" type="password" class="validate" /></li>
+        <li><a class="waves-effect waves-light btn">Login</a></li>
       </ul>
     </div>
   </nav>
-<h1>zzzzzzzzzzzzzzzzzzzzzz</h1>
+
+  <script>
+    $(".button-collapse").sideNav();
+  </script>
