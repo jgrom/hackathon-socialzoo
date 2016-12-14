@@ -11,7 +11,6 @@ app.config(function($routeProvider) {
     });
 });
 
-
 app.directive("w3TestDirective", function() {
     return {
         restrict : "A",
@@ -20,14 +19,14 @@ app.directive("w3TestDirective", function() {
 });
 
 app.directive('header', function header() {
-      return{
+      return {
         restrict : "A",
         templateUrl : 'angular-app/partials/header.html'
     };
 });
 
 app.directive('footer', function footer() {
-      return{
+      return {
         restrict : "A",
         templateUrl : 'angular-app/partials/footer.html'
     };
