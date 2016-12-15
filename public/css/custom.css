@@ -1,3 +1,7 @@
+#sz-nav {
+  height: 80px !important;
+}
+
 #sz-nav input {
   background-color: #FFF !important;
   font-size: 1rem !important;
@@ -7,6 +11,3 @@
   width: 120px !important;
   color: #567;
 }
-#sz-nav {
-height: 80px !important;
-]
