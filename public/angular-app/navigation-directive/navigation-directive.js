@@ -1,6 +1,6 @@
-angular.module('zapp').directive('mhNavigation', mhNavigation);
+angular.module('zapp').directive('rzNavigation', rzNavigation);
 
-function mhNavigation() {
+function rzNavigation() {
   return {
     restrict: 'E',
     templateUrl: 'angular-app/navigation-directive/navigation-directive.html'

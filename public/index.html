@@ -3,16 +3,14 @@
 <head>
   <meta charset="utf-8"/>
   <title>ReZOO - World social network for zoo</title>
-  <link rel="icon" href="img/favicon.ico" />
+  <link rel="icon" href="img/favicon.png" />
 
   <!--Import Google Icon Font-->
   <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
   <!--Import materialize.css-->
-  <!-- <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"/>
-  <link type="text/css" rel="stylesheet" href="css/bootswatch-theme/cerulean/bootstrap.min.css"/> -->
   <link type="text/css" rel="stylesheet" href="vendor/materialize/css/materialize.min.css"  media="screen,projection"/>
 
-  <!-- <link type="text/css" rel="stylesheet"  media="screen,projection" href="css/custom.css"/> -->
+  <link type="text/css" rel="stylesheet"  media="screen,projection" href="css/custom.css"/>
   <link type="text/css" rel="stylesheet"  media="screen,projection" href="css/style.css"/>
 
   <!--Let browser know website is optimized for mobile-->
@@ -21,14 +19,15 @@
 
 <body>
 
-  <!-- <mh-navigation></mh-navigation> -->
-  <header header></header>
+  <rz-navigation></rz-navigation>
+  <!-- <header header></header> -->
+  <!-- <div class="container"> -->
   <main ng-view></main>
+  <!-- </div> -->
   <footer footer></footer>
 
   <!-- Scripts import -->
   <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
-  <!-- <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script> -->
   <script type="text/javascript" src="vendor/materialize/js/materialize.min.js"></script>
   <script type="text/javascript" src="vendor/angularjs/angular.min.js"></script>
   <script type="text/javascript" src="vendor/angularjs/angular-route.min.js"></script>
