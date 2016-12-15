@@ -23,23 +23,23 @@ function config($httpProvider, $routeProvider) {
 
   $routeProvider
   .when('/', {
-    templateUrl  : 'angular-app/partials/main.html',
+    templateUrl  : 'angular-app/main.html',
     access       : { restricted: false }
   })
   .when('/posts', {
-    templateUrl  : 'angular-app/partials/post-list/posts.html',
+    templateUrl  : 'angular-app/post-list/posts.html',
 //    controller   : PostsController,
 //    controllerAs : 'vm',
     access: { restricted: false }
   })
   .when('/post/:id', {
-    templateUrl  : 'angular-app/partials/post-display/post.html',
+    templateUrl  : 'angular-app/post-display/post.html',
 //    controller   : PostController,
 //    controllerAs : 'vm',
     access: { restricted: false }
   })
   .when('/page/:id', {
-    templateUrl  : 'angular-app/partials/page-display/page.html',
+    templateUrl  : 'angular-app/page-display/page.html',
 //    controller   : PageController,
 //    controllerAs : 'vm',
     access: { restricted: false }
