@@ -23,7 +23,7 @@ function config($httpProvider, $routeProvider) {
 
   $routeProvider
   .when('/', {
-    templateUrl  : 'angular-app/main.html',
+    templateUrl  : 'angular-app/partials/main.html',
     access       : { restricted: false }
   })
   .when('/posts', {
@@ -34,6 +34,12 @@ function config($httpProvider, $routeProvider) {
   })
   .when('/post/:id', {
     templateUrl  : 'angular-app/post-display/post.html',
+//    controller   : PostController,
+//    controllerAs : 'vm',
+    access: { restricted: false }
+  })
+  .when('/postdemo', {
+    templateUrl  : 'angular-app/post-display/post-demo.html',
 //    controller   : PostController,
 //    controllerAs : 'vm',
     access: { restricted: false }
