@@ -26,6 +26,9 @@ body {
   border: 1px solid white;
 }
 /*navbar*/
+nav {
+  height: 90px;
+}
 .demo-card-square.mdl-card {
     width: 320px;
     height: 320px;
@@ -55,4 +58,14 @@ body {
 h2.mdl-card__title-text{
   font-size: 30px;
 }
+#logo{
+  padding-left: 90px;
+}
    /*cards*/
+   footer {
+     height: 150px;
+   }
+
+footer img {
+  width: 15%;
+  }
