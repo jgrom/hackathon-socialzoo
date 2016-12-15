@@ -152,3 +152,8 @@ h1,h2,h3 {
 .comment {
   padding: 8px;
 }
+
+h4#rezoo  {
+  font-size: 22px;
+  text-align: center;
+}
