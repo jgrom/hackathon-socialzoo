@@ -25,7 +25,6 @@ function config($httpProvider, $routeProvider) {
 
   // INDEX
   $routeProvider
-<<<<<<< HEAD
   .when('/', {
     templateUrl  : 'angular-app/partials/main.html',
     access       : { restricted: false }
@@ -49,32 +48,11 @@ function config($httpProvider, $routeProvider) {
     access: { restricted: false }
   })
 
-    .when('/', {
-      templateUrl  : 'angular-app/partials/main.html',
-      access       : { restricted: false }
-    });
-
-
   $routeProvider
     .when('/home', {
       templateUrl  : 'angular-app/main/main.html',
       access       : { restricted: false }
     });
-
-  // POSTS
-  $routeProvider
-    .when('/posts', {
-        templateUrl  : 'angular-app/post-list/posts.html',
-      //  controller   : PostsController,
-      //  controllerAs : 'vm',
-        access: { restricted: false }
-      })
-      .when('/post/:id', {
-        templateUrl  : 'angular-app/post-display/post.html',
-      //  controller   : PostController,
-      //  controllerAs : 'vm',
-        access: { restricted: false }
-      });
 
   // PROFILE
   $routeProvider
