@@ -38,8 +38,8 @@ function config($httpProvider, $routeProvider) {
 //    controllerAs : 'vm',
     access: { restricted: false }
   })
-  .when('/page/:id', {
-    templateUrl  : 'angular-app/partials/page-display/page.html',
+  .when('/page', {
+    templateUrl  : 'angular-app/page-display/page.html',
 //    controller   : PageController,
 //    controllerAs : 'vm',
     access: { restricted: false }
