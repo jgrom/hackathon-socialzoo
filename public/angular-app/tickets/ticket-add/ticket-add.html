@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Nouveau billet {{ vm.toto }}</h1>
+  <h1><i class="medium material-icons">library_add</i>Nouveau billet {{ vm.toto }}</h1>
   <form name="vm.ticketForm" ng-submit="vm.addTicket()">
 
     <div class="row">
@@ -11,7 +11,7 @@
 
     <div class="row">
       <div class="input-field col s12">
-        <textarea id="description" class="materialize-textarea" required></textarea>
+        <textarea id="description" class="materialize-textarea validate" ng-model="vm.description" required></textarea>
         <label for="description">Description</label>
       </div>
     </div>

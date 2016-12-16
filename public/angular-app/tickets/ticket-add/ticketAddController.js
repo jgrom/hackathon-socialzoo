@@ -1,7 +1,7 @@
 angular.module('zapp').controller('TicketAddController', TicketAddController);
 
 //function TicketAddController($location, ticketsFactory) {
-function TicketAddController($route, $routeParams, $window, ticketsFactory, AuthFactory, jwtHelper) {
+function TicketAddController($location, $route, $routeParams, $window, ticketsFactory, AuthFactory, jwtHelper) {
 
   var vm = this;
   vm.isSubmitted = false;
