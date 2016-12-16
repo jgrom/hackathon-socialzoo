@@ -1,26 +1,35 @@
-<nav id="sz-nav" ng-controller="LoginController as vm" ng-init="vm.init()">
-  <div class="nav-wrapper brown darken-1">
+<nav id="sz-nav" class="brown darken-1" ng-controller="LoginController as vm" ng-init="vm.init()">
+  <div class="nav-wrapper">
 
     <a href="#/" class="brand-logo"><img src="../img/logo-rezoo-small-anim.gif" /></a>
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+    <a href="#" class="button-collapse" data-activates="mobile-demo"><i class="material-icons">menu</i></a>
 
     <form ng-if="!vm.isLoggedIn()" class="right hide-on-med-and-down" role="login" ng-submit="vm.login()">
       <ul>
+
         <li>
           <div class="input-field inline" ng-class="{'has-error': vm.error}">
             <input autocapitalize="none" id="username" ng-model="vm.username" placeholder="Nom d'utilisateur" type="text">
           </div>
         </li>
+
         <li>
           <div class="input-field inline" ng-class="{'has-error': vm.error}">
             <input autocapitalize="none" id="password" ng-model="vm.password" placeholder="Mot de passe" type="password">
           </div>
         </li>
+
         <li>
           <button class="btn waves-effect waves-light" type="submit" name="action">Se connecter</button>
         </li>
+
       </ul>
     </form>
+
+    <ul ng-if="vm.isLoggedIn()" class="right hide-on-med-and-down">
+      <li>&nbsp;&nbsp;&nbsp;Bonjour {{ vm.loggedInUser }} !&nbsp;&nbsp;&nbsp;</li>
+      <li><button class="btn-floating btn-large waves-effect waves-light red"  ng-click="vm.logout()"><i class="material-icons">power_settings_new</i></button></li>
+    </ul>
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li ng-class="vm.isActiveTab('')"><a href="#/">Home</a></li>
@@ -31,13 +40,7 @@
       <li ng-class="vm.isActiveTab('profile')" ng-if="vm.isLoggedIn()"><a href="#/profile">Profil</a></li>
     </ul>
 
-    <ul ng-if="vm.isLoggedIn()" class="right hide-on-med-and-down">
-      <li>Welcom {{ vm.loggedInUser }}</li>
-      <li><button class="btn waves-effect waves-light" ng-click="vm.logout()">Logout</button></li>
-    </ul>
-
     <!-- SIDE-NAV ------------------------------------------------------------->
-
     <ul id="mobile-demo" class="side-nav">
       <li ng-class="vm.isActiveTab('')"><a href="#/">Home</a></li>
       <li ng-class="vm.isActiveTab('hotels')"><a href="#/hotels">Hotels</a></li>

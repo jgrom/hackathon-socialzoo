@@ -10,14 +10,14 @@ function RegisterController($http) {
     };
 
     if(!vm.username || !vm.password) {
-      vm.error = 'Please add a username and a password.';
+      vm.error = 'Entrez un nom d\'utilisateur et un mot de passe.';
     } else {
       if(vm.password !== vm.passwordRepeat) {
-        vm.error = 'Please make sure the passwords match.';
+        vm.error = 'Vérifiez que les mots de passe sont identiques.';
       } else {
         $http.post('/api/users/register', user).then(function(result) {
           console.log(result);
-          vm.message = 'Successful registration, please login.';
+          vm.message = 'Inscription terminée. Vous pouvez vous connecter.';
           vm.error = '';
         }).catch(function(error) {
           console.log(error);

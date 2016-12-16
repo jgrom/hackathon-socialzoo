@@ -28,83 +28,92 @@ function config($httpProvider, $routeProvider) {
   .when('/', {
     templateUrl  : 'angular-app/partials/main.html',
     access       : { restricted: false }
+  });
+
+  // TICKETS
+  $routeProvider
+  .when('/tickets', {
+    templateUrl  : 'angular-app/post-list/posts.html',
+    //    controller   : PostsController,
+    //    controllerAs : 'vm',
+    access: { restricted: false }
+  })
+  .when('/ticket/add', {
+    templateUrl  : 'angular-app/tickets/ticket-add/ticket-add.html',
+    controller   : TicketAddController,
+    controllerAs : 'vm',
+    access: { restricted: false }
   })
   .when('/posts', {
     templateUrl  : 'angular-app/post-list/posts.html',
-//    controller   : PostsController,
-//    controllerAs : 'vm',
+    //    controller   : PostsController,
+    //    controllerAs : 'vm',
     access: { restricted: false }
   })
   .when('/post/:id', {
     templateUrl  : 'angular-app/post-display/post.html',
-//    controller   : PostController,
-//    controllerAs : 'vm',
+    //    controller   : PostController,
+    //    controllerAs : 'vm',
     access: { restricted: false }
   })
   .when('/postdemo', {
     templateUrl  : 'angular-app/post-display/post-demo.html',
-//    controller   : PostController,
-//    controllerAs : 'vm',
+    //    controller   : PostController,
+    //    controllerAs : 'vm',
     access: { restricted: false }
-  })
-
-  $routeProvider
-    .when('/home', {
-      templateUrl  : 'angular-app/main/main.html',
-      access       : { restricted: false }
-    });
+  });
 
   // PROFILE
   $routeProvider
-    .when('/profiles', {
-      templateUrl  : 'angular-app/profile-list/profiles.html',
-      access       : { restricted: false }
-    })
-    .when('/profile', {
-      templateUrl  : 'angular-app/profile/profile.html',
-      access       : { restricted: true }
-    });
+  .when('/profiles', {
+    templateUrl  : 'angular-app/profile-list/profiles.html',
+    access       : { restricted: false }
+  })
+  .when('/profile', {
+    templateUrl  : 'angular-app/profile/profile.html',
+    access       : { restricted: true }
+  });
 
   // PAGE ###
   $routeProvider
-    .when('/page', {
-      templateUrl  : 'angular-app/page-display/page.html',
+  .when('/page', {
+    templateUrl  : 'angular-app/page-display/page.html',
     //  controller   : PageController,
     //  controllerAs : 'vm',
-      access       : { restricted: false }
-    });
+    access       : { restricted: false }
+  });
 
   // HOTEL ### SUPPR
   $routeProvider
-    .when('/hotels', {
-      templateUrl  : 'angular-app/hotel-list/hotels.html',
-      controller   : HotelsController,
-      controllerAs : 'vm',
-      access       : { restricted: false }
-    })
-    .when('/hotel/:id', {
-      templateUrl  : 'angular-app/hotel-display/hotel.html',
-      controller   : HotelController,
-      controllerAs : 'vm',
-      access       : { restricted: false }
-    });
+  .when('/hotels', {
+    templateUrl  : 'angular-app/hotel-list/hotels.html',
+    controller   : HotelsController,
+    controllerAs : 'vm',
+    access       : { restricted: false }
+  })
+  .when('/hotel/:id', {
+    templateUrl  : 'angular-app/hotel-display/hotel.html',
+    controller   : HotelController,
+    controllerAs : 'vm',
+    access       : { restricted: false }
+  });
 
   // REGISTER
   $routeProvider
-    .when('/register', {
-      templateUrl  : 'angular-app/register/register.html',
-      controller   : RegisterController,
-      controllerAs : 'vm',
-      access: { restricted: false }
-    });
-    // .when('/profile', {
-    //   templateUrl  : 'angular-app/profile/profile.html',
-    //   access       : { restricted: true }
-    // });
+  .when('/register', {
+    templateUrl  : 'angular-app/register/register.html',
+    controller   : RegisterController,
+    controllerAs : 'vm',
+    access: { restricted: false }
+  });
+  // .when('/profile', {
+  //   templateUrl  : 'angular-app/profile/profile.html',
+  //   access       : { restricted: true }
+  // });
 
-    // OTHERS
+  // OTHERS
   $routeProvider
-    .otherwise({ redirectTo:'/' });
+  .otherwise({ redirectTo:'/' });
 }
 
 // AUTH

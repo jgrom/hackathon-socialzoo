@@ -1,13 +1,30 @@
+/* sticky footer */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* navbar */
 #sz-nav {
-  height: 80px !important;
+  padding: 0 12px;
+  height: 80px;
 }
 
 #sz-nav input {
   background-color: #FFF !important;
   font-size: 1rem !important;
-  border: 1px solid #666 !important;
+  border: 1px solid #000 !important;
   margin : 5px 10px !important;
-  padding : 5px 10px !important;
+  padding : 8px 10px !important;
   width: 120px !important;
-  color: #567;
+  color: #333;
 }
+
+/*sticky footer*/
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main { flex: 1 0 auto; }
