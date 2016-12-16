@@ -91,12 +91,6 @@ span.card-title  {
 
 @include font-face("bauhaus", font-files("../font/bauhaus-webfont.ttf", "../font/bauhaus-webfont.eot", "../font/bauhaus-webfont.svg", "../font/bauhaus-webfont.woff" ));
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .wrapper {
   max-width: 30em;
   height: auto;
