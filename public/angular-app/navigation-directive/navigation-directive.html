@@ -20,7 +20,7 @@
         </li>
 
         <li>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Se connecter</button>
+          <button class="btn waves-effect waves-light" type="submit">Se connecter</button>
         </li>
 
       </ul>
@@ -33,7 +33,8 @@
 
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li ng-class="vm.isActiveTab('')"><a href="#/">Accueil</a></li>
-      <li ng-class="vm.isActiveTab('posts')" ng-if="vm.isLoggedIn()"><a href="#/posts">News</a></li>
+      <li ng-class="vm.isActiveTab('posts')" ng-if="vm.isLoggedIn()"><a href="#/posts">Voir les billets</a></li>
+      <li ng-class="vm.isActiveTab('ticket')" ng-if="vm.isLoggedIn()"><a href="#/ticket/add">Poster un billet</a></li>
       <li ng-class="vm.isActiveTab('register')" ng-if="!vm.isLoggedIn()"><a href="#/register">S'inscrire</a></li>
       <li ng-class="vm.isActiveTab('profile')" ng-if="vm.isLoggedIn()"><a href="#/profile">Profil</a></li>
     </ul>

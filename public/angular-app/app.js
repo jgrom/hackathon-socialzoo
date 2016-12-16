@@ -45,7 +45,7 @@ function config($httpProvider, $routeProvider) {
     access: { restricted: false }
   })
   .when('/posts', {
-    templateUrl  : 'angular-app/post-list/posts.html',
+    templateUrl  : 'angular-app/post-display/post-demo.html',
     //    controller   : PostsController,
     //    controllerAs : 'vm',
     access: { restricted: false }
