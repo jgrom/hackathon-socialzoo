@@ -87,11 +87,11 @@ span.card-title  {
  @include font-face("skia", font-files("../font/skia.ttf", "../font/skia-webfont.eot", "../font/skia-webfont.svg", "../font/skia-webfont.ttf", "../font/skia-webfont.woff" ));
 
 @include font-face("bauhaus", font-files("../font/bauhaus-webfont.ttf", "../font/bauhaus-webfont.eot", "../font/bauhaus-webfont.svg", "../font/bauhaus-webfont.woff" ));
-* {
+/** {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}*/
 
 body {
   background: #eee;
